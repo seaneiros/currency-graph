@@ -201,7 +201,16 @@ class Graph extends React.PureComponent {
 
 }
 
+Graph.propTypes = {
+  data: PropTypes.array,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  offsetX: PropTypes.number,
+  offsetY: PropTypes.number
+}
+
 Graph.defaultProps = {
+  data: [],
   height: 500,
   width: 800,
   offsetX: 50,

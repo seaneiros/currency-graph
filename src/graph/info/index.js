@@ -155,4 +155,14 @@ class Info extends React.PureComponent {
 
 }
 
+Info.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  points: PropTypes.array,
+  axisStart: PropTypes.shape({
+    x: PropTypes.number,
+    y: PropTypes.number
+  })
+}
+
 export default Info;

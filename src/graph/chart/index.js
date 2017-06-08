@@ -17,4 +17,8 @@ const Chart = ({ points }) => {
   );
 }
 
+Chart.propTypes = {
+  points: PropTypes.array
+}
+
 export default Chart;

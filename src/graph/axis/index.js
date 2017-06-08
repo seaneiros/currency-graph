@@ -21,4 +21,11 @@ const Axis = ({ value, length, x, y }) => {
   );
 }
 
+Axis.propTypes = {
+  value: PropTypes.string,
+  length: PropTypes.number,
+  x: PropTypes.number,
+  y: PropTypes.number
+}
+
 export default Axis;
