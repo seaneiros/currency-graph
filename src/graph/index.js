@@ -84,38 +84,40 @@ class Graph extends React.PureComponent {
 
         return {
           monthName: date.format('MMMM'),
-          monthNumber: +date.format('M')
+          monthNumber: +date.format('M'),
+          ts: i.ts
         }
       } )
-      .forEach( ({ monthName, monthNumber }) => {
+      .forEach( ({ monthName, monthNumber, ts }) => {
         if (!!groupedMonths[monthName]) {
-          groupedMonths[monthName].value++
+          if (groupedMonths[monthName].lastTs < ts) {
+            groupedMonths[monthName].lastTs = ts;
+          }
         } else {
           groupedMonths[monthName] = {
             order: monthNumber,
-            value: 1
+            lastTs: 0
           }
         }
       } )
     
-    let collector = 0;
     const labelY = height - offsetY + 30;
 
     const xScaleLabels = Object.keys(groupedMonths)
       .map( k => ({
         label: k,
         order: groupedMonths[k].order,
-        len: groupedMonths[k].value
+        ts: groupedMonths[k].lastTs
       }))
       .sort( (a, b) => a.order > b.order ? 1 : -1 )
-      .map( i => {
-        collector += i.len;
+      .map( (i, idx, arr) => {
+        const daysDiff = Math.ceil((i.ts - arr[0].ts) / DAY_LENGTH);
+
         return {
-          x: Math.round(offsetX + collector * xModifier - 70),
+          x: offsetX + ( idx === 0 ? 0 : Math.round(daysDiff * xModifier) ) + 10,
           y: labelY,
           label: i.label
         };
-        // return xLabel;
       } )
 
     const points = data.map( (item, idx, arr) => {
