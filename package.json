@@ -2,7 +2,7 @@
   "name": "currency",
   "version": "0.0.1",
   "scripts": {
-    "build": "NODE_ENV=\"production\" ./node_modules/.bin/webpack",
+    "start": "NODE_ENV=\"production\" ./node_modules/.bin/webpack -p && ./node_modules/.bin/webpack-dev-server",
     "dev": "./node_modules/.bin/webpack --watch"
   },
   "dependencies": {

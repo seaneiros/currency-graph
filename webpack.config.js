@@ -73,8 +73,7 @@ module.exports = {
   },
   plugins,
   devServer: {
-    publicPath: path.resolve(__dirname, './assets'),
-    contentBase: path.resolve(__dirname),
+    publicPath: '/',
     historyApiFallback: true,
     port: 3000,
     compress: !IS_DEV,
