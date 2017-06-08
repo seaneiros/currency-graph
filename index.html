@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency</title>
+  <style>
+    .graph {
+      background-color: #f5f5f5;
+    }
+
+    .axis__label,
+    .x-label {
+      fill: #888;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .axis__line {
+      stroke: #ddd;
+      stroke-width: 1;
+      stroke-opacity: .8;
+    }
+
+    .chart {
+      fill: none;
+      stroke: #4f6aa5;
+      stroke-width: 1;
+      stroke-opacity: .8;
+    }
+
+    .info-line {
+      fill: #4f6aa5;
+      stroke: #4f6aa5;
+      stroke-width: 2;
+    }
+
+    .info__plate {
+      fill: #fff;
+      border-radius: 3px;
+      filter:url(#dropshadow);
+    }
+
+    .info__date {
+      fill: rgba(0, 0, 0, .5);
+    }
+
+    .info__diff--less {
+      fill: #dc4f4f;
+    }
+
+    .info__diff--more {
+      fill: #108e17;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./assets/vendor.js"></script>
+  <script src="./assets/bundle.js"></script>
+</body>
+</html>

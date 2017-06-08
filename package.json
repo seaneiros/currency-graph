@@ -1,0 +1,24 @@
+{
+  "name": "currency",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "NODE_ENV=\"production\" ./node_modules/.bin/webpack",
+    "dev": "./node_modules/.bin/webpack --watch"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
